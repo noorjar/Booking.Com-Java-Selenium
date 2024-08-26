@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-26T22:36:39 EET" name="Default suite" finished-at="2024-08-26T22:36:49 EET" duration-ms="10149">
+    <groups>
+    </groups>
+    <test started-at="2024-08-26T22:36:39 EET" name="Default test" finished-at="2024-08-26T22:36:49 EET" duration-ms="10149">
+      <class name="Home.BookingMainClass">
+        <test-method is-config="true" signature="mysetup()[pri:0, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:39 EET" name="mysetup" finished-at="2024-08-26T22:36:49 EET" duration-ms="9912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mysetup -->
+        <test-method signature="VerifyDefaultLanguage()[pri:1, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="VerifyDefaultLanguage" finished-at="2024-08-26T22:36:49 EET" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDefaultLanguage -->
+        <test-method signature="VerifyDefaultCurrency()[pri:2, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="VerifyDefaultCurrency" finished-at="2024-08-26T22:36:49 EET" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDefaultCurrency -->
+        <test-method signature="FlightsTabIsNotSelected()[pri:3, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="FlightsTabIsNotSelected" finished-at="2024-08-26T22:36:49 EET" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FlightsTabIsNotSelected -->
+        <test-method signature="VerifyCustomerSupportlinkintheFooter()[pri:3, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="VerifyCustomerSupportlinkintheFooter" finished-at="2024-08-26T22:36:49 EET" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCustomerSupportlinkintheFooter -->
+      </class> <!-- Home.BookingMainClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
