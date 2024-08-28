@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="5" total="7" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-26T22:36:39 EET" name="Default suite" finished-at="2024-08-26T22:36:49 EET" duration-ms="10149">
+  <suite started-at="2024-08-28T05:32:14 EET" name="Default suite" finished-at="2024-08-28T05:33:34 EET" duration-ms="80093">
     <groups>
     </groups>
-    <test started-at="2024-08-26T22:36:39 EET" name="Default test" finished-at="2024-08-26T22:36:49 EET" duration-ms="10149">
+    <test started-at="2024-08-28T05:32:14 EET" name="Default test" finished-at="2024-08-28T05:33:34 EET" duration-ms="80093">
       <class name="Home.BookingMainClass">
-        <test-method is-config="true" signature="mysetup()[pri:0, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:39 EET" name="mysetup" finished-at="2024-08-26T22:36:49 EET" duration-ms="9912" status="PASS">
+        <test-method is-config="true" signature="mysetup()[pri:0, instance:Home.BookingMainClass@3ebff828]" started-at="2024-08-28T05:32:14 EET" name="mysetup" finished-at="2024-08-28T05:32:37 EET" duration-ms="22970" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mysetup -->
-        <test-method signature="VerifyDefaultLanguage()[pri:1, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="VerifyDefaultLanguage" finished-at="2024-08-26T22:36:49 EET" duration-ms="34" status="PASS">
+        <test-method signature="SearchforHotels()[pri:6, instance:Home.BookingMainClass@3ebff828]" started-at="2024-08-28T05:32:37 EET" name="SearchforHotels" finished-at="2024-08-28T05:33:02 EET" duration-ms="25355" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDefaultLanguage -->
-        <test-method signature="VerifyDefaultCurrency()[pri:2, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="VerifyDefaultCurrency" finished-at="2024-08-26T22:36:49 EET" duration-ms="42" status="PASS">
+        </test-method> <!-- SearchforHotels -->
+        <test-method signature="CheckInAndCheckOut()[pri:7, instance:Home.BookingMainClass@3ebff828]" started-at="2024-08-28T05:33:02 EET" name="CheckInAndCheckOut" finished-at="2024-08-28T05:33:34 EET" duration-ms="31743" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDefaultCurrency -->
-        <test-method signature="FlightsTabIsNotSelected()[pri:3, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="FlightsTabIsNotSelected" finished-at="2024-08-26T22:36:49 EET" duration-ms="72" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FlightsTabIsNotSelected -->
-        <test-method signature="VerifyCustomerSupportlinkintheFooter()[pri:3, instance:Home.BookingMainClass@757d6814]" started-at="2024-08-26T22:36:49 EET" name="VerifyCustomerSupportlinkintheFooter" finished-at="2024-08-26T22:36:49 EET" duration-ms="55" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyCustomerSupportlinkintheFooter -->
+        </test-method> <!-- CheckInAndCheckOut -->
       </class> <!-- Home.BookingMainClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
