@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver.Options;
@@ -50,7 +51,10 @@ public class BookingParametrsClass {
 	            System.out.println("An error occurred while trying to close the popup: " + e.getMessage());
 	        }
 	    }
-}
+	 
+	 
+
+	 }
 
 
  
