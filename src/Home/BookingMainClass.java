@@ -28,6 +28,7 @@ public class BookingMainClass extends BookingParametrsClass {
 		GeneralSetUp();
 		closePopupIfPresent();
 	}
+//-------------------------------------------------------------------------------------------------------------------
 
 	@Test(priority = 1,enabled = false)
 	public void VerifyDefaultLanguage() {
@@ -88,69 +89,131 @@ public class BookingMainClass extends BookingParametrsClass {
 		closePopupIfPresent();
 		}
 //-------------------------------------------------------------------------------------------------------------------
-	@Test(priority = 6,enabled = true)
+	@Test(priority = 7,enabled = true)
 	public void SearchforHotels() throws InterruptedException {
 	closePopupIfPresent();
 	WebElement HotelsTab = driver.findElement(By.cssSelector(".a7dc8ec444"));
 	HotelsTab.click();
 	
-	WebElement searchInput  = driver.findElement(By.id(":rh:"));
+	WebElement searchInput  = driver.findElement(By.xpath("//input[@id=':rh:']"));
 	searchInput .clear();
 	searchInput .sendKeys("New York");
 	
 	Thread.sleep(5000);
-	WebElement SearchButton =driver.findElement(By.cssSelector("button[type='submit']"));	
-	
-	WebElement suggestionsContainer = driver.findElement(By.xpath("//ul[@role='group']"));
+
+
+	WebElement suggestionsContainer = driver.findElement(By.id("autocomplete-results"));
 	List<WebElement> suggestionList  = suggestionsContainer .findElements(By.tagName("li"));
 	
 	WebElement thirdSuggestion  =  suggestionList .get(2);
 	thirdSuggestion .click();
-	//SearchButton.click();
+
 		}
 //-------------------------------------------------------------------------------------------------------------------
-	@Test(priority = 7,enabled = true)
+	@Test(priority = 6,enabled = true)
 	public void CheckInCheckOut() throws InterruptedException {
 		closePopupIfPresent();
+		
 		driver.findElement(By.className("c3953d2910")).click();
-		WebElement NextmonthButton = driver.findElement(By.xpath("//button[@aria-label='Next month']"));
-// Generate a random number for how many times to click the button
-		Thread.sleep(10000);
-		int clicks = rand.nextInt(5) + 1; 
+		
+		
+		while (true) {
+			String month = driver.findElement(By.xpath("(//h3[@aria-live = 'polite'])[1]")).getText();
+			if (month.equals(myMonth)){
+				break;
+				
+			}
+			else {
+				driver.findElement(By.cssSelector("button[aria-label='Next month']")).click();
+			}
+			WebElement calendarTable = driver.findElement(By.xpath("(//table[@class = 'c0d46ba7c8'])[1]"));
+			List<WebElement> calendarRows  = calendarTable .findElements(By.tagName("td"));
+			for(WebElement element:calendarRows) {
+				String date = element.getText();
+				if (date.equals(myDate)) {
+					element.click();
+					break;
+				}
+			}
+		}
+		/////////////////////////////////////////////////////////////////////////////////////////////
+		while (true) {
+			String month1 = driver.findElement(By.xpath("(//h3[@aria-live = 'polite'])[2]")).getText();
+			if (month1.equals(myMonth1)){
+				break;
+				
+			}
+			else {
+				driver.findElement(By.cssSelector("button[aria-label='Next month']")).click();
+			}
+			WebElement calendarTable1 = driver.findElement(By.xpath("(//table[@class = 'c0d46ba7c8'])[2]"));
+			List<WebElement> calendarRows1  = calendarTable1 .findElements(By.tagName("td"));
+			for(WebElement element1:calendarRows1) {
+				String date1 = element1.getText();
+				if (date1.equals(myDate1)) {
+					element1.click();
+					break;
+				}
+			}
+		}
+		
 
-		for (int i = 0; i < clicks; i++) {
-			NextmonthButton.click();
-	 }
-
-		WebElement calendarTable = driver.findElement(By.cssSelector("body > div:nth-child(6) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > table:nth-child(2) > tbody:nth-child(2)"));
-		List<WebElement> calendarRows  = calendarTable .findElements(By.tagName("tr"));
-		calendarRows .get(0).click();
-		calendarRows .get(1).click();
 	}
 //-------------------------------------------------------------------------------------------------------------------
-	@Test (priority = 8)
+	@Test (priority = 8,enabled = true)
 	public void	 SelectRooms() throws InterruptedException {
 		closePopupIfPresent();
-		Thread.sleep(9000);
-		WebElement r = driver.findElement(By.cssSelector(".dba1b3bddf.ead010d0b7.a080340b08.f268349634"));
-		r.click();
-		WebElement b=driver.findElement(By.cssSelector(".abb8c87649"));
-		List<WebElement> c =b.findElements(By.className("d1821e6945"));
-	    	c.get(0).click();
-			c.get(2).click();// Click the element
-			c.get(1).click();
-			
-			String arrayRooms [] = {"option[value='-1']","option[value='1'],option[value='2'],option[value='3'],option[value='4'],option[value='1'],option[value='5']"};
-			int RandomRoomNumber  = rand.nextInt(arrayRooms.length);
-			WebElement Rooms = driver.findElement(By.cssSelector(arrayRooms[RandomRoomNumber]));
-			Rooms.click();
-}
+		WebElement RoomsTab = driver.findElement(By.className("a6391e882c"));
+		RoomsTab.click();
 	
-	@Test(priority = 9)
+		
+		
+		while (true) {
+			String Adults = driver.findElement(By.xpath("(//span[@class = 'fb7047f72a'])[1]")).getText();
+			if (Adults.equals(myAdults)){
+				break;
+				
+			}
+			else {
+				driver.findElement(By.xpath("(//button[@tabindex = '-1'])[2]")).click();
+			}
+		}
+		while (true) {
+			String Rooms = driver.findElement(By.xpath("(//span[@class = 'fb7047f72a'])[3]")).getText();
+			if (Rooms.equals(myRooms)){
+				break;
+				
+			}
+			else {
+				driver.findElement(By.xpath("(//button[@tabindex = '-1'])[6]")).click();
+			}
+		}
+		while (true) {
+			String Child = driver.findElement(By.xpath("(//span[@class = 'fb7047f72a'])[2]")).getText();
+			if (Child.equals(myChildren)){
+				break;
+				
+			}
+			else {
+				driver.findElement(By.xpath("(//button[@tabindex = '-1'])[4]")).click();
+			}
+			
+		}
+		WebElement SelectTag = driver.findElement(By.className("ef7e348457"));
+		Select select = new Select(SelectTag);
+		
+		int totalOptions = select.getOptions().size();
+		int randomNumber = rand.nextInt(totalOptions - 1) + 1;
+		select.selectByIndex(randomNumber);
+}
+//-------------------------------------------------------------------------------------------------------------------
+	
+	@Test(priority = 10,enabled = true)
 	public void Search () {
 	WebElement SearchButton =driver.findElement(By.cssSelector("button[type='submit']"));
 	SearchButton.click();
 }
+//-------------------------------------------------------------------------------------------------------------------
 	
 	
 }

@@ -6,7 +6,7 @@
       <class name="Home.BookingMainClass">
         <methods>
           <include name="SelectRooms"/>
-          <include name="CheckInCheckOut"/>
+          <include name="Search"/>
           <include name="mysetup"/>
         </methods>
       </class> <!-- Home.BookingMainClass -->

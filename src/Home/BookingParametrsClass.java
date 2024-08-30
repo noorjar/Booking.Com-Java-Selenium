@@ -22,9 +22,13 @@ public class BookingParametrsClass {
 	String expectedCustomerSupportLink  = "Customer support";
 	boolean flightsTabNotSelected = false;
 	Random rand = new Random();	
-	
-
-	
+	String myMonth = "December 2024";
+	String myDate ="12";
+	String myMonth1 = "February 2025";
+	String myDate1 ="12";
+	String myAdults = "4";
+	String myRooms = "2";
+	String myChildren ="1";
 	
 	
 	public void GeneralSetUp() {
