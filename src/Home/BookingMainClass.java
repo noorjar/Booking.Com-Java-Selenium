@@ -92,14 +92,14 @@ public class BookingMainClass extends BookingParametrsClass {
 	@Test(priority = 7,enabled = true)
 	public void SearchforHotels() throws InterruptedException {
 	closePopupIfPresent();
-	WebElement HotelsTab = driver.findElement(By.cssSelector(".a7dc8ec444"));
+	WebElement HotelsTab = driver.findElement(By.cssSelector(".b7ab62d599"));
 	HotelsTab.click();
 	
 	WebElement searchInput  = driver.findElement(By.xpath("//input[@id=':rh:']"));
 	searchInput .clear();
 	searchInput .sendKeys("New York");
 	
-	Thread.sleep(5000);
+	Thread.sleep(10000);
 
 
 	WebElement suggestionsContainer = driver.findElement(By.id("autocomplete-results"));
@@ -114,7 +114,7 @@ public class BookingMainClass extends BookingParametrsClass {
 	public void CheckInCheckOut() throws InterruptedException {
 		closePopupIfPresent();
 		
-		driver.findElement(By.className("c3953d2910")).click();
+		driver.findElement(By.className("a1139161bf")).click();
 		
 		
 		while (true) {
@@ -126,7 +126,7 @@ public class BookingMainClass extends BookingParametrsClass {
 			else {
 				driver.findElement(By.cssSelector("button[aria-label='Next month']")).click();
 			}
-			WebElement calendarTable = driver.findElement(By.xpath("(//table[@class = 'c0d46ba7c8'])[1]"));
+			WebElement calendarTable = driver.findElement(By.xpath("(//table[@class = 'eb03f3f27f'])[1]"));
 			List<WebElement> calendarRows  = calendarTable .findElements(By.tagName("td"));
 			for(WebElement element:calendarRows) {
 				String date = element.getText();
@@ -146,7 +146,7 @@ public class BookingMainClass extends BookingParametrsClass {
 			else {
 				driver.findElement(By.cssSelector("button[aria-label='Next month']")).click();
 			}
-			WebElement calendarTable1 = driver.findElement(By.xpath("(//table[@class = 'c0d46ba7c8'])[2]"));
+			WebElement calendarTable1 = driver.findElement(By.xpath("(//table[@class = 'eb03f3f27f'])[2]"));
 			List<WebElement> calendarRows1  = calendarTable1 .findElements(By.tagName("td"));
 			for(WebElement element1:calendarRows1) {
 				String date1 = element1.getText();
@@ -163,13 +163,13 @@ public class BookingMainClass extends BookingParametrsClass {
 	@Test (priority = 8,enabled = true)
 	public void	 SelectRooms() throws InterruptedException {
 		closePopupIfPresent();
-		WebElement RoomsTab = driver.findElement(By.className("a6391e882c"));
+		WebElement RoomsTab = driver.findElement(By.className("d777d2b248"));
 		RoomsTab.click();
 	
 		
 		
 		while (true) {
-			String Adults = driver.findElement(By.xpath("(//span[@class = 'fb7047f72a'])[1]")).getText();
+			String Adults = driver.findElement(By.xpath("(//span[@class = 'd723d73d5f'])[1]")).getText();
 			if (Adults.equals(myAdults)){
 				break;
 				
@@ -179,7 +179,7 @@ public class BookingMainClass extends BookingParametrsClass {
 			}
 		}
 		while (true) {
-			String Rooms = driver.findElement(By.xpath("(//span[@class = 'fb7047f72a'])[3]")).getText();
+			String Rooms = driver.findElement(By.xpath("(//span[@class = 'd723d73d5f'])[3]")).getText();
 			if (Rooms.equals(myRooms)){
 				break;
 				
@@ -189,7 +189,7 @@ public class BookingMainClass extends BookingParametrsClass {
 			}
 		}
 		while (true) {
-			String Child = driver.findElement(By.xpath("(//span[@class = 'fb7047f72a'])[2]")).getText();
+			String Child = driver.findElement(By.xpath("(//span[@class = 'd723d73d5f'])[2]")).getText();
 			if (Child.equals(myChildren)){
 				break;
 				
@@ -199,7 +199,7 @@ public class BookingMainClass extends BookingParametrsClass {
 			}
 			
 		}
-		WebElement SelectTag = driver.findElement(By.className("ef7e348457"));
+		WebElement SelectTag = driver.findElement(By.className("ebf4591c8e"));
 		Select select = new Select(SelectTag);
 		
 		int totalOptions = select.getOptions().size();
@@ -208,7 +208,7 @@ public class BookingMainClass extends BookingParametrsClass {
 }
 //-------------------------------------------------------------------------------------------------------------------
 	
-	@Test(priority = 10,enabled = true)
+	@Test(priority = 9,enabled = true)
 	public void Search () {
 	WebElement SearchButton =driver.findElement(By.cssSelector("button[type='submit']"));
 	SearchButton.click();
