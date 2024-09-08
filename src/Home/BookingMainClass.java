@@ -11,6 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -215,5 +216,57 @@ public class BookingMainClass extends BookingParametrsClass {
 }
 //-------------------------------------------------------------------------------------------------------------------
 	
-	
+	@Test(priority = 10,enabled = true)
+	public void filter () {
+		closePopupIfPresent();
+		driver.findElement(By.xpath("//button[@aria-label='Close map']")).click();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("scrollTo(scrollTo(0,2450))");
+		
+		WebElement PropertyRatingContainer =driver.findElement(By.xpath("//div[@data-filters-group='class']"));
+		
+		List<WebElement> PropertyRating = PropertyRatingContainer.findElements(By.tagName("svg"));
+		PropertyRating.get(1).click();
+		PropertyRating.get(2).click();
+	}
+//------------------------------------------------------------------------------------------------------------------
+	@Test(priority = 11,enabled = true)
+	public void filter2 () {
+		closePopupIfPresent();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("scrollTo(scrollTo(0,1550))");
+		
+		WebElement ReviewScoreContainer =driver.findElement(By.xpath("//div[@data-filters-group='review_score']"));
+		
+		List<WebElement> ReviewScore = ReviewScoreContainer.findElements(By.tagName("svg"));
+		ReviewScore.get(1).click();
+	}
+//------------------------------------------------------------------------------------------------------------------
+	@Test(priority = 12,enabled = true)
+	public void filter3 () {
+		closePopupIfPresent();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("scrollTo(scrollTo(0,1550))");
+		
+		WebElement PropertyTypeContainer =driver.findElement(By.xpath("//div[@data-filters-group='ht_id']"));
+		
+		List<WebElement> PropertyType = PropertyTypeContainer.findElements(By.tagName("svg"));
+		PropertyType.get(0).click();
+	}
+//------------------------------------------------------------------------------------------------------------------
+	@Test(priority = 13,enabled = true)
+	public void filter4 () {
+		closePopupIfPresent();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("scrollTo(scrollTo(0,1550))");
+		
+		WebElement PriceContainer =driver.findElement(By.xpath("//div[@data-filters-group='price']"));
+		
+	WebElement Slider= PriceContainer.findElement(By.className("f3c828a390"));
+		 Actions action = new Actions(driver);
+
+	        // Move the slider by a specific offset (this will vary depending on the slider's width)
+	        action.clickAndHold(Slider).moveByOffset(50, 0).release().perform();
+	}
 }
