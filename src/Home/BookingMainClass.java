@@ -269,4 +269,19 @@ public class BookingMainClass extends BookingParametrsClass {
 	        // Move the slider by a specific offset (this will vary depending on the slider's width)
 	        action.clickAndHold(Slider).moveByOffset(50, 0).release().perform();
 	}
+//------------------------------------------------------------------------------------------------------------------
+	@Test(priority = 14,enabled = true)
+	public void Sort () {
+		closePopupIfPresent();
+		
+		WebElement SortByTab =driver.findElement(By.className("cac967781c"));
+		SortByTab.click();
+		
+	WebElement UlContainer =driver.findElement(By.className("ad7c39949a"));
+	List<WebElement>LiList = UlContainer.findElements(By.tagName("li"));
+	int RandomNumberofLista =rand.nextInt(LiList.size());
+	LiList.get(RandomNumberofLista).click();
+	}
+//------------------------------------------------------------------------------------------------------------------
+	
 }
