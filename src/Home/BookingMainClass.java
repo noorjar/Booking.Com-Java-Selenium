@@ -31,7 +31,7 @@ public class BookingMainClass extends BookingParametrsClass {
 	}
 //-------------------------------------------------------------------------------------------------------------------
 
-	@Test(priority = 1,enabled = false)
+	@Test(priority = 1,enabled = true)
 	public void VerifyDefaultLanguage() {
 		closePopupIfPresent();
 		boolean IslangEn = driver.findElement(By.tagName("html")).getAttribute("lang").contains("en");
@@ -39,7 +39,7 @@ public class BookingMainClass extends BookingParametrsClass {
 		
 	}
 //-------------------------------------------------------------------------------------------------------------------
-	@Test(priority = 2,enabled = false)
+	@Test(priority = 2,enabled = true)
 	public void VerifyDefaultCurrency() {
 		closePopupIfPresent();
 		WebElement currencyPickerButton = driver.findElement(By.cssSelector("button[data-testid='header-currency-picker-trigger']"));
@@ -48,18 +48,18 @@ public class BookingMainClass extends BookingParametrsClass {
 		
 	}
 //-------------------------------------------------------------------------------------------------------------------
-	@Test(priority = 3,enabled = false)
+	@Test(priority = 3,enabled = true)
 	public void FlightsTabIsNotSelected() {
 		closePopupIfPresent();
 		WebElement ULContainerNavList = driver
-				.findElement(By.cssSelector("nav[aria-label='What are you looking for?'] ul[class='d1b2041e44']"));
+				.findElement(By.cssSelector("nav[aria-label='What are you looking for?'] ul[class='c6e9d1599e']"));
 		List<WebElement> listItems = ULContainerNavList.findElements(By.tagName("li"));
 
 		for (WebElement listItem : listItems) {
 			// Check if the list item contains the text "Flights"
 			if (listItem.getText().contains("Flights")) {
 				// Check if the list item does not have the 'f62c02908f' class
-				if (!listItem.getAttribute("class").contains("f62c02908f")) {
+				if (!listItem.getAttribute("class").contains("d0607887c7")) {
 					flightsTabNotSelected = true;
 					break; 
 				}
@@ -69,7 +69,7 @@ public class BookingMainClass extends BookingParametrsClass {
 		
 	}
 //-------------------------------------------------------------------------------------------------------------------
-	@Test(priority = 4,enabled = false)
+	@Test(priority = 4,enabled = true)
 	public void VerifyCustomerSupportlinkinHeader() {
 		closePopupIfPresent();
 		WebElement customerSupportLink = driver.findElement(By.cssSelector("a[aria-label='Customer support']"));
@@ -78,6 +78,7 @@ public class BookingMainClass extends BookingParametrsClass {
 		
 	}
 //-------------------------------------------------------------------------------------------------------------------
+
 	@Test(priority = 5,enabled = false)
 	public void ChangeLanguage() {
 		closePopupIfPresent();
@@ -89,6 +90,11 @@ public class BookingMainClass extends BookingParametrsClass {
 		languageList.get(randomNumbertoSelectLanguage).click();
 		closePopupIfPresent();
 		}
+//-------------------------------------------------------------------------------------------------------------------
+	
+	// Note: Tests from Test 6 onward currently only function when the language is set to English.
+	// As a result, Test 5 (ChangeLanguage) should be disabled during this test run to avoid interference.
+	// In the future, this can be improved by enhancing multi-language support, allowing all tests to run successfully across different languages.	 
 //-------------------------------------------------------------------------------------------------------------------
 	@Test(priority = 7,enabled = true)
 	public void SearchforHotels() throws InterruptedException {

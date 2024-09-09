@@ -5,7 +5,13 @@
     <classes>
       <class name="Home.BookingMainClass">
         <methods>
+          <include name="filter4"/>
+          <include name="Sort"/>
+          <include name="filter3"/>
+          <include name="filter2"/>
           <include name="filter"/>
+          <include name="CheckInCheckOut"/>
+          <include name="FlightsTabIsNotSelected"/>
           <include name="mysetup"/>
         </methods>
       </class> <!-- Home.BookingMainClass -->

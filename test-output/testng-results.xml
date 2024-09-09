@@ -1,49 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="14" passed="9" failed="0" skipped="0">
+<testng-results ignored="1" total="14" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-08T22:37:12 EET" name="Default suite" finished-at="2024-09-08T22:40:53 EET" duration-ms="220456">
+  <suite started-at="2024-09-09T22:27:09 EET" name="Default suite" finished-at="2024-09-09T22:32:36 EET" duration-ms="326235">
     <groups>
     </groups>
-    <test started-at="2024-09-08T22:37:12 EET" name="Default test" finished-at="2024-09-08T22:40:53 EET" duration-ms="220456">
+    <test started-at="2024-09-09T22:27:09 EET" name="Default test" finished-at="2024-09-09T22:32:36 EET" duration-ms="326235">
       <class name="Home.BookingMainClass">
-        <test-method is-config="true" signature="mysetup()[pri:0, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:37:12 EET" name="mysetup" finished-at="2024-09-08T22:37:45 EET" duration-ms="33048" status="PASS">
+        <test-method is-config="true" signature="mysetup()[pri:0, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:27:09 EET" name="mysetup" finished-at="2024-09-09T22:28:12 EET" duration-ms="63089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mysetup -->
-        <test-method signature="CheckInCheckOut()[pri:6, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:37:45 EET" name="CheckInCheckOut" finished-at="2024-09-08T22:37:47 EET" duration-ms="2000" status="PASS">
+        <test-method signature="VerifyDefaultLanguage()[pri:1, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:28:12 EET" name="VerifyDefaultLanguage" finished-at="2024-09-09T22:28:33 EET" duration-ms="20128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDefaultLanguage -->
+        <test-method signature="VerifyDefaultCurrency()[pri:2, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:28:33 EET" name="VerifyDefaultCurrency" finished-at="2024-09-09T22:28:53 EET" duration-ms="20066" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDefaultCurrency -->
+        <test-method signature="FlightsTabIsNotSelected()[pri:3, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:28:53 EET" name="FlightsTabIsNotSelected" finished-at="2024-09-09T22:29:13 EET" duration-ms="20124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FlightsTabIsNotSelected -->
+        <test-method signature="VerifyCustomerSupportlinkinHeader()[pri:4, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:29:13 EET" name="VerifyCustomerSupportlinkinHeader" finished-at="2024-09-09T22:29:33 EET" duration-ms="20079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCustomerSupportlinkinHeader -->
+        <test-method signature="CheckInCheckOut()[pri:6, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:29:33 EET" name="CheckInCheckOut" finished-at="2024-09-09T22:29:55 EET" duration-ms="21786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckInCheckOut -->
-        <test-method signature="SearchforHotels()[pri:7, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:37:47 EET" name="SearchforHotels" finished-at="2024-09-08T22:38:18 EET" duration-ms="30297" status="PASS">
+        <test-method signature="SearchforHotels()[pri:7, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:29:55 EET" name="SearchforHotels" finished-at="2024-09-09T22:30:25 EET" duration-ms="30319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchforHotels -->
-        <test-method signature="SelectRooms()[pri:8, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:38:18 EET" name="SelectRooms" finished-at="2024-09-08T22:38:38 EET" duration-ms="20586" status="PASS">
+        <test-method signature="SelectRooms()[pri:8, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:30:25 EET" name="SelectRooms" finished-at="2024-09-09T22:30:46 EET" duration-ms="20646" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectRooms -->
-        <test-method signature="Search()[pri:9, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:38:38 EET" name="Search" finished-at="2024-09-08T22:39:10 EET" duration-ms="31784" status="PASS">
+        <test-method signature="Search()[pri:9, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:30:46 EET" name="Search" finished-at="2024-09-09T22:30:53 EET" duration-ms="6949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method signature="filter()[pri:10, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:39:10 EET" name="filter" finished-at="2024-09-08T22:39:31 EET" duration-ms="20834" status="PASS">
+        <test-method signature="filter()[pri:10, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:30:53 EET" name="filter" finished-at="2024-09-09T22:31:14 EET" duration-ms="20929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filter -->
-        <test-method signature="filter2()[pri:11, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:39:31 EET" name="filter2" finished-at="2024-09-08T22:39:51 EET" duration-ms="20521" status="PASS">
+        <test-method signature="filter2()[pri:11, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:31:14 EET" name="filter2" finished-at="2024-09-09T22:31:34 EET" duration-ms="20482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filter2 -->
-        <test-method signature="filter3()[pri:12, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:39:51 EET" name="filter3" finished-at="2024-09-08T22:40:12 EET" duration-ms="20284" status="PASS">
+        <test-method signature="filter3()[pri:12, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:31:34 EET" name="filter3" finished-at="2024-09-09T22:31:54 EET" duration-ms="20360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filter3 -->
-        <test-method signature="filter4()[pri:13, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:40:12 EET" name="filter4" finished-at="2024-09-08T22:40:32 EET" duration-ms="20632" status="PASS">
+        <test-method signature="filter4()[pri:13, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:31:54 EET" name="filter4" finished-at="2024-09-09T22:32:15 EET" duration-ms="20706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filter4 -->
-        <test-method signature="Sort()[pri:14, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-08T22:40:32 EET" name="Sort" finished-at="2024-09-08T22:40:53 EET" duration-ms="20418" status="PASS">
+        <test-method signature="Sort()[pri:14, instance:Home.BookingMainClass@5b408dc3]" started-at="2024-09-09T22:32:15 EET" name="Sort" finished-at="2024-09-09T22:32:36 EET" duration-ms="20528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sort -->
